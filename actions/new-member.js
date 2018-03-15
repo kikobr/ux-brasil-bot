@@ -13,7 +13,7 @@ function getRandom (array) {
 }
 
 module.exports = function(event, context, callback){
-    var body = event.body;
+    var body = JSON.parse(event.body);
 
     var chatId = body.message.chat.id;
     var messageId = body.message.message_id;
